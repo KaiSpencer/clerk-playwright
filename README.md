@@ -4,11 +4,13 @@ An example of how to implement [Playwright](https://playwright.dev/) testing wit
 
 ## Setup Prerequisites
 
-### Clerk Credentials
+### Credentials
 
-Copy the .env.example into a .env.local file with your Clerk credentials.
+Copy the .env.example into a .env.local file.
 
 Grab your `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` and `CLERK_SECRET_KEY` from your Clerk Dashboard.
+
+Populate `TEST_EMAIL` and `TEST_PASSWORD` with a test user that you have created in your Clerk Dashboard.
 
 ## How it works
 
