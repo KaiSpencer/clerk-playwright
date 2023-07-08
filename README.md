@@ -20,17 +20,10 @@ The `auth.setup.ts` file contains a function that will login to Clerk prior to r
 
 This will save a the authentication cookies so that future tests do not need to authenticate again, they simply re-use the user session.
 
+### Key files
+
+`auth.setup.ts` contains the function that will login to Clerk prior to running tests.
+
 Cookie details are saved to `/tests/user.json`
 
-The Playwright configuration below shows how the saved cookies are picked up by the tests.
-
-```ts
-{
-      name: "chromium",
-      use: {
-        ...devices["Desktop Chrome"],
-        storageState: "tests/user.json",
-      },
-      dependencies: ["setup"],
-    },
-```
+`storageState` in `playwright.config.ts` is used to load the cookies from the `auth.setup.ts`.
